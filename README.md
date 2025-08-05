@@ -20,11 +20,11 @@ voice-bot-chatgpt/
 ├── backend/
 │   ├── main.py           # FastAPI backend
 │   └── ...
-├── frontend/
-│   ├── index.html
-│   ├── package.json
-│   ├── src/
-│   │   └── App.jsx       # Frontend logic
+├── frontend/             
+│   ├── index.html        # Main HTML page
+│   ├── script.js         
+│   ├── style.css        
+│   ├── package.json      
 │   └── ...
 ├── .gitignore
 ├── README.md
