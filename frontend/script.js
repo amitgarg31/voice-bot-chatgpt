@@ -3,7 +3,7 @@ const stopBtn = document.getElementById("stop-btn");
 const chatBox = document.getElementById("chat-box");
 const speakingIndicator = document.getElementById("speaking-indicator");
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+// const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 
 let currentUtterance = null;
@@ -43,11 +43,11 @@ const listen = () => {
     speakingIndicator.classList.add("hidden");
 
     try {
-      const res = await fetch(`${API_BASE_URL}/ask`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: userText }),
-      });
+      const res = await fetch("https://voice-bot-chatgpt.onrender.com/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question: userText }),
+        });
 
       const data = await res.json();
       appendMessage(data.answer, "bot");
