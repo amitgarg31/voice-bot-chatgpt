@@ -8,7 +8,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "https://voice-bot-chatgpt.netlify.app",
+    "https://voice-bot-ui.netlify.app",
     "http://localhost:3000"
 ],
     allow_credentials=True,
