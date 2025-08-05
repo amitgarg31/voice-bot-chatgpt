@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" href="/favicon.ico" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voice Chat Assistant</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice Chat Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Voice Chat Assistant 🤖</h1>
+    <div id="chat-box" class="chat-box"></div>
+    <div class="button-group">
+      <button id="start-btn">🎙️ Start Speaking</button>
+      <button id="stop-btn">🛑 Stop Speaking</button>
+    </div>
+  </div>
+
+  <div id="speaking-indicator" class="modal hidden">🎤 Listening...</div>
+
+  <!-- Load script after DOM is ready -->
+  <script src="script.js" defer></script>
+</body>
 </html>
