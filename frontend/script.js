@@ -3,6 +3,10 @@ const stopBtn = document.getElementById("stop-btn");
 const chatBox = document.getElementById("chat-box");
 const speakingIndicator = document.getElementById("speaking-indicator");
 
+// Example in React
+const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:8000";
+
+
 let currentUtterance = null;
 
 const appendMessage = (text, sender) => {
@@ -40,7 +44,7 @@ const listen = () => {
     speakingIndicator.classList.add("hidden");
 
     try {
-      const res = await fetch("http://localhost:8000/ask", {
+      const res = await fetch(`${API_BASE_URL}/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: userText }),
