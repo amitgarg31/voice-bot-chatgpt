@@ -13,6 +13,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {"message": "Voice Bot API is live!"}
+
 @app.post("/ask", response_model=AnswerResponse)
 async def ask_question(request: QuestionRequest):
     answer = await get_chatgpt_response(request.question)

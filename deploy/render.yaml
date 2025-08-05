@@ -7,4 +7,6 @@ services:
     startCommand: uvicorn backend.main:app --host 0.0.0.0 --port 10000
     envVars:
       - key: OPENAI_API_KEY
-        value: your-key
+        value: key_here
+      - key: GEMINI_API_KEY
+        value: key_here
