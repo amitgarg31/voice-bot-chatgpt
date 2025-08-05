@@ -3,8 +3,7 @@ const stopBtn = document.getElementById("stop-btn");
 const chatBox = document.getElementById("chat-box");
 const speakingIndicator = document.getElementById("speaking-indicator");
 
-// Example in React
-const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:8000";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 
 let currentUtterance = null;
