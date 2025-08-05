@@ -39,6 +39,9 @@ const listen = () => {
     appendMessage(userText, "user");
     speakingIndicator.classList.add("hidden");
 
+    console.log("Calling API...");
+    console.log("Payload:", userText);
+
     try {
       const res = await fetch("https://voice-bot-chatgpt.onrender.com/ask", {
         method: "POST",
@@ -46,7 +49,9 @@ const listen = () => {
         body: JSON.stringify({ question: userText }),
       });
 
+
       const data = await res.json();
+      console.log("Response data:", data);
       appendMessage(data.answer, "bot");
       speak(data.answer);
     } catch (error) {
