@@ -1,0 +1,15 @@
+# Ignore Python virtual environment
+.venv/
+
+# Ignore environment files
+.env
+*.env
+
+# VSCode & OS files
+.vscode/
+__pycache__/
+.DS_Store
+
+# Node modules (for frontend)
+node_modules/
+dist/
